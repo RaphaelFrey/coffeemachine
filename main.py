@@ -23,4 +23,4 @@ power_led.on()
 brew_led.off()
 
 while True:
-    button.list_for_input()
+    button.listen_for_input()

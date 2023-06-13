@@ -10,6 +10,6 @@ class Button:
         self.button = Pin(pin, Pin.IN, Pin.PULL_DOWN)
         self.callback = callback
 
-    def list_for_input(self):
+    def listen_for_input(self):
         if self.button.value():
             self.callback()
