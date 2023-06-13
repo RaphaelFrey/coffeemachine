@@ -17,7 +17,6 @@ class PowerLed:
         self.led.toggle()
 
     def on_blink_finished(self):
-        self.led.off()
         self.timer.deinit()
 
     def blink(self, count, interval, callback=None):
