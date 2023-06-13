@@ -14,7 +14,7 @@ class PowerLed:
         self.led.on()
 
     def blink_callback(self, timer):
-        self.led.toggle()  # LED-Zustand umkehren
+        self.led.toggle()
 
     def on_blink_finished(self):
         self.led.off()
