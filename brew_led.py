@@ -1,14 +1,15 @@
-import machine
-import time
+from machine import Pin
 
 
 class BrewLed:
 
-    def __init__(self, pin_number):
-        self.led_pin = machine.Pin(pin_number, machine.Pin.OUT)
+    led = ()
+
+    def __init__(self, pin):
+        self.led = Pin(pin, Pin.OUT)
 
     def on(self):
-        self.led_pin.on()
+        self.led.on()
 
     def off(self):
-        self.led_pin.off()
+        self.led.off()

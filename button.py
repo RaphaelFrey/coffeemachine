@@ -1,17 +1,15 @@
-import machine
+from machine import Pin
 
 
 class Button:
+
+    button = ()
+    callback = ()
+
     def __init__(self, pin, callback):
-        self.button_pin = machine.Pin(pin, machine.Pin.IN, machine.Pin.PULL_DOWN)
+        self.button = Pin(pin, Pin.IN, Pin.PULL_DOWN)
         self.callback = callback
 
-    def check_button(self):
-        if self.button_pin.value() == 1:
+    def list_for_input(self):
+        if self.button.value():
             self.callback()
-
-    def wait_for_button_press(self):
-        while True:
-            if self.button_pin.value() == 1:
-                self.callback()
-                break
