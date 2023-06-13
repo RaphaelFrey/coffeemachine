@@ -8,7 +8,7 @@ interval_in_ms = 500
 count = 90
 
 
-def on_blink_finished():
+def on_brew_finished():
     power_led.on()
     brew_led.off()
 
